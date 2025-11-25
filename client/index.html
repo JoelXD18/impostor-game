@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego Impostor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login">
+        <h2>Ingresa tu nombre</h2>
+        <input type="text" id="nameInput" placeholder="Tu nombre">
+        <button id="joinBtn">Unirse</button>
+    </div>
+
+    <div id="game" style="display:none">
+        <h2 id="roleInfo"></h2>
+        <h3>Jugadores:</h3>
+        <ul id="playersList"></ul>
+
+        <div id="turnDiv" style="display:none">
+            <h3>Es tu turno!</h3>
+            <input type="text" id="wordInput" placeholder="Escribe una palabra">
+            <button id="sendWordBtn">Enviar</button>
+        </div>
+
+        <h3>Palabras dichas:</h3>
+        <ul id="wordsList"></ul>
+
+        <div id="voteDiv">
+            <h3>Vota para eliminar:</h3>
+            <ul id="voteList"></ul>
+        </div>
+
+        <div id="gameOver" style="display:none">
+            <h2 id="winnerText"></h2>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.7.1/socket.io.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
